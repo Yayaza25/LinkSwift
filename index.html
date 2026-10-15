@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LinkSwift 安装助手(非官方)</title>
+<meta name="description" content="LinkSwift（网盘直链下载助手）油猴脚本的非官方安装助手页：一键跳转官方安装链接。">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --bg:#f6f7f9;--panel:#ffffff;--ink:#16181d;--ink-2:#555b68;--ink-3:#8b919e;
+  --line:#e4e6eb;--accent:#2f6fed;--accent-ink:#1d4fd8;--accent-soft:#eef3fe;
+  --ok:#1f9d55;--ok-soft:#e9f7ef;--warn:#b7791f;--warn-soft:#fdf6e7;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.7;font-size:15px;-webkit-font-smoothing:antialiased}
+.wrap{width:min(860px,100% - 40px);margin-inline:auto}
+a{color:var(--accent-ink);text-decoration:none}
+a:hover{text-decoration:underline}
+header{padding:38px 0 8px}
+.badge{display:inline-block;font-size:12px;font-weight:600;color:var(--warn);background:var(--warn-soft);border:1px solid #f0e3c0;border-radius:999px;padding:2px 10px;vertical-align:2px;margin-left:8px}
+h1{font-size:26px;margin:0 0 6px;letter-spacing:0}
+.sub{color:var(--ink-2);margin:0 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 0}
+.chips span{font-size:12px;color:var(--ink-2);background:#fff;border:1px solid var(--line);border-radius:6px;padding:2px 8px}
+h2{font-size:17px;margin:34px 0 12px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px 16px 14px;display:flex;flex-direction:column;gap:10px}
+.card h3{margin:0;font-size:15.5px}
+.card h3 small{color:var(--ink-3);font-weight:500;font-size:12.5px;margin-left:6px}
+.card p{margin:0;color:var(--ink-2);font-size:13.5px;flex:1}
+.btn{display:block;text-align:center;padding:10px 14px;border-radius:6px;font-weight:600;font-size:14px;border:1px solid var(--accent);background:var(--accent);color:#fff}
+.btn:hover{background:var(--accent-ink);text-decoration:none}
+.btn.ghost{background:#fff;color:var(--accent-ink)}
+.btn.ghost:hover{background:var(--accent-soft)}
+.steps{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin:0}
+.steps li{margin:6px 0;color:var(--ink-2)}
+.steps b{color:var(--ink)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:12px 16px;color:var(--ink-2);font-size:13.5px}
+.note p{margin:6px 0}
+footer{margin:40px 0 46px;color:var(--ink-3);font-size:12.5px;border-top:1px solid var(--line);padding-top:14px}
+.ok{color:var(--ok);font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>LinkSwift 安装助手<span class="badge">非官方</span></h1>
+  <p class="sub">「网盘直链下载助手」系油猴脚本,用于在网盘页面获取文件下载直链,并发送到 Aria2 / IDM 等下载器。</p>
+  <div class="chips">
+    <span>百度网盘</span><span>阿里云盘</span><span>中国移动云盘</span><span>天翼云盘</span>
+    <span>迅雷云盘</span><span>光鸭云盘</span><span>夸克网盘</span><span>UC 网盘</span><span>123 云盘</span>
+  </div>
+</header>
+
+<h2>1. 安装脚本</h2>
+<div class="cards">
+  <div class="card">
+    <h3>正式版 <small>v1.1.3 · 推荐</small></h3>
+    <p>稳定分支,日常使用首选。从官方源安装,可自动跟随更新。</p>
+    <a class="btn" href="https://github.com/hmjz100/LinkSwift/raw/main/%EF%BC%88%E6%94%B9%EF%BC%89%E7%BD%91%E7%9B%98%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B.user.js">安装正式版</a>
+  </div>
+  <div class="card">
+    <h3>金丝雀版 <small>v1.1.4 · 尝鲜</small></h3>
+    <p>开发分支,最新功能与修复,可能不稳定。同样来自官方源。</p>
+    <a class="btn ghost" href="https://github.com/hmjz100/LinkSwift/raw/dev/%EF%BC%88%E6%94%B9%EF%BC%89%E7%BD%91%E7%9B%98%E7%9B%B4%E9%93%BE%E4%B8%8B%E8%BD%BD%E5%8A%A9%E6%89%8B.user.js">安装金丝雀版</a>
+  </div>
+  <div class="card">
+    <h3>脚本猫国内源</h3>
+    <p>国内镜像,更新可能滞后。适合 GitHub 访问不畅的网络环境。</p>
+    <a class="btn ghost" href="https://scriptcat.org/script-show-page/1604">前往脚本猫</a>
+  </div>
+</div>
+
+<h2>2. 前置条件:脚本管理器</h2>
+<ul class="steps">
+  <li><b>Edge</b>:扩展商店搜索 <b>Tampermonkey</b>(篡改猴)安装 —— <a href="https://microsoftedge.microsoft.com/addons/detail/iikmkjmpaadaobahmlepeloendndfphd">商店链接</a></li>
+  <li><b>Chrome</b>:装 <b>Tampermonkey</b> 或 <b>ScriptCat</b>(脚本猫) —— <a href="https://chromewebstore.google.com/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo">商店链接</a> / <a href="https://scriptcat.org/">脚本猫官网</a></li>
+  <li>脚本管理器装好后,点上面任一"安装"按钮,在弹出的确认页点 <b>安装</b> 即可。</li>
+  <li>装好后打开网盘页面(如 pan.baidu.com),页面中会出现 LinkSwift 的入口按钮。</li>
+</ul>
+
+<h2>3. 可选:搭配扩展脚本</h2>
+<div class="cards">
+  <div class="card">
+    <h3>百度网盘会员青春版</h3>
+    <p>显示会员身份,解锁页面倍速、字幕、头像修改等 UI 功能。</p>
+    <a class="btn ghost" href="https://github.com/hmjz100/BaiduNetDiskYouthMember">前往安装</a>
+  </div>
+  <div class="card">
+    <h3>123 云盘会员青春版</h3>
+    <p>123 云盘页面的同类 UI 增强脚本。</p>
+    <a class="btn ghost" href="https://github.com/hmjz100/123panYouthMember">前往安装</a>
+  </div>
+  <div class="card">
+    <h3>阿里云盘会员青春版</h3>
+    <p>阿里云盘页面的同类 UI 增强脚本(脚本猫)。</p>
+    <a class="btn ghost" href="https://scriptcat.org/script-show-page/2470">前往安装</a>
+  </div>
+</div>
+
+<h2>说明</h2>
+<div class="note">
+  <p>本页为<b>非官方</b>安装助手,不托管脚本代码,所有安装按钮均跳转到 LinkSwift 官方仓库或官方指定的分发平台,以便持续获得自动更新。原项目:<a href="https://github.com/hmjz100/LinkSwift">hmjz100/LinkSwift</a>(AGPL-3.0)。</p>
+  <p>脚本的下载直链均基于各网盘服务商公开 API 获取,不包含限速破解;使用第三方工具访问网盘服务可能存在账号风控风险,请自行评估并低调使用。</p>
+</div>
+
+<footer>
+  LinkSwift 由 Hmjz100、油小猴 等开发者维护 · 本页仅提供安装指引 · 更新于 2026-10-15
+</footer>
+
+</div>
+</body>
+</html>
